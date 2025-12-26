@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# IDEs and Tools
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Application data
+webapp/data/
+data/
+
+# Private/Sensitive prompts (uncomment if needed)
+# prompts/private/
+# *.secret.md
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+temp/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/

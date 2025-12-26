@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  promptdb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: promptdb:latest
+    container_name: promptdb-web
+    ports:
+      - "5002:5000"
+    volumes:
+      # Mount prompts directory as read-only
+      - ./prompts:/app/prompts:ro
+      # Mount data directory for application data (logs, cache, etc.)
+      # Update this path to match your local system or use Docker volumes
+      - ./data:/app/data
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-change-me-in-production}
+      - PROMPTS_DIR=/app/prompts
+      - DATA_DIR=/app/data
+      - PORT=5000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - promptdb-network
+    labels:
+      - "com.promptdb.description=PromptDB Web Interface"
+      - "com.promptdb.version=1.0.0"
+
+networks:
+  promptdb-network:
+    driver: bridge
+    name: promptdb-network
