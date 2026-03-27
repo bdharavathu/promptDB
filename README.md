@@ -1,6 +1,14 @@
 # SiloPrompts - Personal AI Prompt Database
 
-A lightweight, self-hosted web application for storing, searching, and managing your AI prompts across different platforms (ChatGPT, Claude, Perplexity, Gemini, etc.).
+In the GenAI era, every ask, every query, and every search is a prompt.
+
+Some are throwaway. But the ones that actually work — refined through trial and error, saving you hours, containing your proprietary workflows — those are valuable. And most people store them in scattered notes, buried chat histories, or nowhere at all.
+
+Cloud prompt managers exist, but they require uploading your prompts to someone else's server. Your sensitive instructions and strategies sitting on a platform you don't control.
+
+**SiloPrompts** — a private, self-hosted prompt library. Open source. No cloud. No accounts. No data leaving your machine. Just your best prompts — organized, searchable, and one click away.
+
+> A lightweight, self-hosted web application for storing, searching, and managing your AI prompts across different platforms (ChatGPT, Claude, Perplexity, Gemini, etc.).
 
 ![SiloPrompts Web UI](assets/siloprompts_ui.png)
 
@@ -19,11 +27,19 @@ A lightweight, self-hosted web application for storing, searching, and managing 
 
 ## Quick Start
 
-### Option 1: Docker (Recommended)
+### Option 1: Docker Run (Quickest)
+
+```bash
+docker run -d -p 5002:5000 bdharavathu/siloprompts
+
+# Access at http://localhost:5002
+```
+
+### Option 2: Docker Compose
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/bdharavathu/siloprompts.git
 cd siloprompts
 
 # Start the application
@@ -32,9 +48,13 @@ docker-compose up -d
 # Access at http://localhost:5002
 ```
 
-### Option 2: Docker with Custom Configuration
+### Option 3: Docker with Custom Configuration
 
 ```bash
+# Clone the repository
+git clone https://github.com/bdharavathu/siloprompts.git
+cd siloprompts
+
 # Copy environment example
 cp .env.example .env
 
@@ -48,7 +68,7 @@ python -c 'import secrets; print(secrets.token_hex(32))'
 docker-compose up -d
 ```
 
-### Option 3: Local Development
+### Option 4: Local Development
 
 ```bash
 # Install dependencies

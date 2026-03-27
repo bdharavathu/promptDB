@@ -43,7 +43,7 @@ build:
 
 up:
 	@echo "Starting SiloPrompts..."
-	@mkdir -p /Users/bdharavathu/codespace/pvdata/silopromptsdata
+	@mkdir -p ./data
 	docker-compose up -d
 	@echo "SiloPrompts is running at http://localhost:5000"
 

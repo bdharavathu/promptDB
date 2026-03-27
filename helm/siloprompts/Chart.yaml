@@ -9,10 +9,10 @@ keywords:
   - ai
   - prompts
   - llm
-home: https://github.com/yourusername/siloprompts
+home: https://github.com/bdharavathu/siloprompts
 sources:
-  - https://github.com/yourusername/siloprompts
+  - https://github.com/bdharavathu/siloprompts
 maintainers:
   - name: SiloPrompts Team
-    email: admin@siloprompts.local
-icon: https://raw.githubusercontent.com/yourusername/siloprompts/main/icon.png
+    email: bdharavathu@users.noreply.github.com
+icon: https://raw.githubusercontent.com/bdharavathu/siloprompts/main/icon.png

@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: siloprompts:latest
+    image: bdharavathu/siloprompts:latest
     container_name: siloprompts-web
     ports:
       - "5002:5000"

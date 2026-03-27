@@ -113,7 +113,7 @@ git add .
 git commit -m "Initial prompt database"
 
 # Add remote backup (optional)
-git remote add origin https://github.com/yourusername/my-prompts.git
+git remote add origin https://github.com/bdharavathu/siloprompts.git
 git push -u origin main
 ```
 

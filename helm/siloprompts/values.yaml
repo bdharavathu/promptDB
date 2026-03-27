@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: siloprompts
+  repository: bdharavathu/siloprompts
   pullPolicy: IfNotPresent
   tag: "latest"
 

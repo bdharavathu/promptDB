@@ -103,7 +103,7 @@ The following table lists the configurable parameters of the SiloPrompts chart a
 | `persistence.data.enabled` | Enable data PVC | `true` |
 | `persistence.data.size` | Data PVC size | `1Gi` |
 | `persistence.data.hostPath.enabled` | Use hostPath for data | `true` |
-| `persistence.data.hostPath.path` | HostPath location | `/Users/bdharavathu/codespace/pvdata/silopromptsdata` |
+| `persistence.data.hostPath.path` | HostPath location | `/path/to/your/data` |
 
 ### Resource Settings
 
