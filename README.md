@@ -33,6 +33,9 @@ Cloud prompt managers exist, but they require uploading your prompts to someone 
 docker run -d -p 5002:5000 bdharavathu/siloprompts
 
 # Access at http://localhost:5002
+
+# Optional: Mount your own prompts
+# docker run -d -p 5002:5000 -v ./prompts:/app/prompts:ro bdharavathu/siloprompts
 ```
 
 ### Option 2: Docker Compose
@@ -163,17 +166,9 @@ python prompt-cli.py sections coding/debugging.md
 python prompt-cli.py copy coding/debugging.md 0
 ```
 
-## Deployment Options
+## Kubernetes Deployment
 
-### Docker Compose (Development/Personal Use)
-
-```bash
-docker-compose up -d
-```
-
-Access at: http://localhost:5002
-
-### Kubernetes with Helm
+### With Helm
 
 ```bash
 # Install with default values
@@ -312,13 +307,13 @@ Example API usage:
 
 ```bash
 # Search for prompts
-curl http://localhost:5000/api/search?q=debug
+curl http://localhost:5002/api/search?q=debug
 
 # Get prompt details
-curl http://localhost:5000/api/prompts/coding/code-review.md
+curl http://localhost:5002/api/prompts/coding/code-review.md
 
 # Health check
-curl http://localhost:5000/health
+curl http://localhost:5002/health
 ```
 
 ## Troubleshooting

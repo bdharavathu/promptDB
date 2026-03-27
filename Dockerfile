@@ -31,6 +31,7 @@ COPY --from=builder /root/.local /home/siloprompts/.local
 COPY --chown=siloprompts:siloprompts app.py .
 COPY --chown=siloprompts:siloprompts html_templates ./html_templates
 COPY --chown=siloprompts:siloprompts static ./static
+COPY --chown=siloprompts:siloprompts prompts ./prompts
 
 # Switch to non-root user
 USER siloprompts
